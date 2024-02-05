@@ -3,11 +3,19 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:websites/animated_container1.dart';
 import 'package:websites/appbar_button.dart';
+import 'package:websites/buttons/container_button2.dart';
 import 'package:websites/checkbox_cont.dart';
-import 'package:websites/container_button.dart';
-import 'package:websites/outlined_button.dart';
+import 'package:websites/buttons/container_button.dart';
+import 'package:websites/contentbox/content_box1.dart';
+import 'package:websites/contentbox/content_box2.dart';
+import 'package:websites/contentbox/content_box3.dart';
+import 'package:websites/buttons/outlined_button.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/painting.dart';
+import 'package:websites/contentbox/content_box4.dart';
+import 'package:websites/contentbox/token_box.dart';
+import 'package:websites/icons/icon_model.dart';
+import 'package:websites/text_shadermask.dart';
 
 class AppbarTransparent extends StatefulWidget {
   const AppbarTransparent({Key? key}) : super(key: key);
@@ -227,26 +235,8 @@ class _AppbarTransparentState extends State<AppbarTransparent> {
                         child: Center(
                           child: Column(
                             children: [
-                              ShaderMask(
-                                shaderCallback: (bounds) => LinearGradient(
-                                  colors: [
-                                    Colors.white,
-                                    Color.fromARGB(255, 166, 61, 65),
-                                  ],
-                                  begin: Alignment.topLeft,
-                                  end: Alignment.bottomRight,
-                                ).createShader(bounds),
-                                child: Text(
-                                  'Try our Platform',
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins ,sans-serif',
-                                    height: 1.5,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors
-                                        .white, // This color will be covered by the gradient
-                                    fontSize: 20,
-                                  ),
-                                ),
+                              TextShadermask(
+                                Text: 'Our Trading Platform',
                               ),
                               Container(
                                 child: RichText(
@@ -429,140 +419,7 @@ class _AppbarTransparentState extends State<AppbarTransparent> {
                                   padding: EdgeInsets.only(
                                     top: pixels > 1000 ? 0 : 100,
                                   ),
-                                  child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        ShaderMask(
-                                          shaderCallback: (bounds) =>
-                                              LinearGradient(
-                                            colors: [
-                                              Colors.white,
-                                              Color.fromARGB(255, 166, 61, 65),
-                                            ],
-                                            begin: Alignment.topLeft,
-                                            end: Alignment.bottomRight,
-                                          ).createShader(bounds),
-                                          child: Text(
-                                            'Best Trading Experience',
-                                            style: TextStyle(
-                                              fontFamily: 'Poppins ,sans-serif',
-                                              height: 1.5,
-                                              fontWeight: FontWeight.w400,
-                                              color: Colors
-                                                  .white, // This color will be covered by the gradient
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                        ),
-                                        SizedBox(height: 10),
-                                        RichText(
-                                          text: TextSpan(
-                                            children: [
-                                              TextSpan(
-                                                text:
-                                                    'Trade crypto currency and refer\n',
-                                                style: TextStyle(
-                                                  fontFamily:
-                                                      'Poppins ,sans-serif',
-                                                  height: 1.2,
-                                                  fontWeight: FontWeight.w600,
-                                                  color: Colors.white,
-                                                  fontSize: 40,
-                                                ),
-                                              ),
-                                              TextSpan(
-                                                text:
-                                                    'new members to get bounes.\n',
-                                                style: TextStyle(
-                                                  fontFamily:
-                                                      'Poppins ,sans-serif',
-                                                  height: 1.2,
-                                                  fontWeight: FontWeight.w600,
-                                                  color: Colors.white,
-                                                  fontSize: 40,
-                                                ),
-                                              ),
-                                              TextSpan(
-                                                text:
-                                                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit ipsa ut\n',
-                                                style: TextStyle(
-                                                  fontFamily:
-                                                      'Poppins ,sans-serif',
-                                                  height: 2,
-                                                  fontWeight: FontWeight.w400,
-                                                  color: Colors.white,
-                                                  fontSize: 20,
-                                                ),
-                                              ),
-                                              TextSpan(
-                                                text:
-                                                    'quasi adipisci voluptates, voluptatibus aliquid alias beatae\n',
-                                                style: TextStyle(
-                                                  fontFamily:
-                                                      'Poppins ,sans-serif',
-                                                  height: 1.5,
-                                                  fontWeight: FontWeight.w400,
-                                                  color: Colors.white,
-                                                  fontSize: 20,
-                                                ),
-                                              ),
-                                              TextSpan(
-                                                text:
-                                                    'reprehenderit incidunt iusto laboriosam.',
-                                                style: TextStyle(
-                                                  fontFamily:
-                                                      'Poppins ,sans-serif',
-                                                  height: 1.5,
-                                                  fontWeight: FontWeight.w400,
-                                                  color: Colors.white,
-                                                  fontSize: 20,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        RichText(
-                                            text: TextSpan(children: [
-                                          TextSpan(
-                                            text:
-                                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum\n',
-                                            style: TextStyle(
-                                              fontFamily: 'Poppins ,sans-serif',
-                                              height: 2,
-                                              fontWeight: FontWeight.w400,
-                                              color: Colors.white,
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                          TextSpan(
-                                            text:
-                                                'risus, non suscipit arcu. Quisque aliquam posuere tortor, sit amet\n',
-                                            style: TextStyle(
-                                              fontFamily: 'Poppins ,sans-serif',
-                                              height: 1.5,
-                                              fontWeight: FontWeight.w400,
-                                              color: Colors.white,
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                          TextSpan(
-                                            text:
-                                                'convallis nunc scelerisque in.\n',
-                                            style: TextStyle(
-                                              fontFamily: 'Poppins ,sans-serif',
-                                              height: 1.5,
-                                              fontWeight: FontWeight.w400,
-                                              color: Colors.white,
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                        ])),
-                                        SizedBox(height: 10),
-                                        CustomOutlinedButton(
-                                          Text: 'READ MORE',
-                                        ),
-                                      ]),
+                                  child: ContentBox1(),
                                 ),
                               ),
                             ),
@@ -637,77 +494,7 @@ class _AppbarTransparentState extends State<AppbarTransparent> {
                         Container(
                           height: 300,
                           width: 650,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              ShaderMask(
-                                shaderCallback: (bounds) => LinearGradient(
-                                  colors: [
-                                    Colors.white,
-                                    Color.fromARGB(255, 166, 61, 65),
-                                  ],
-                                  begin: Alignment.topLeft,
-                                  end: Alignment.bottomRight,
-                                ).createShader(bounds),
-                                child: Text(
-                                  'Crypto Trading',
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins ,sans-serif',
-                                    height: 1.5,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(height: 10),
-                              RichText(
-                                text: TextSpan(
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins ,sans-serif',
-                                    height: 1.5,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.white,
-                                    fontSize: 40,
-                                  ),
-                                  children: [
-                                    TextSpan(
-                                      text:
-                                          'Ride you want, The best way to get\n',
-                                    ),
-                                    TextSpan(
-                                      text: 'wherever you are going',
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: 10),
-                              RichText(
-                                text: TextSpan(
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins ,sans-serif',
-                                    height: 1.5,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                  ),
-                                  children: [
-                                    TextSpan(
-                                      text:
-                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum\n',
-                                    ),
-                                    TextSpan(
-                                      text:
-                                          'risus, non suscipit arcu. Quisque aliquam posuere tortor, sit amet\n',
-                                    ),
-                                    TextSpan(
-                                      text: 'convallis nunc scelerisque in.\n',
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
+                          child: ContentBox2(),
                         ),
                       ],
                     ),
@@ -716,7 +503,7 @@ class _AppbarTransparentState extends State<AppbarTransparent> {
               ],
             ),
             Container(
-              height: 1000,
+              height: MediaQuery.of(context).size.height * 4,
               width: MediaQuery.of(context).size.width,
               color: Colors.black,
               child: Column(
@@ -741,28 +528,9 @@ class _AppbarTransparentState extends State<AppbarTransparent> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   SizedBox(height: 70),
-                                  ShaderMask(
-                                    shaderCallback: (bounds) => LinearGradient(
-                                      colors: [
-                                        Colors.white,
-                                        Color.fromARGB(255, 166, 61, 65),
-                                      ],
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                    ).createShader(bounds),
-                                    child: Text(
-                                      'Token Features',
-                                      style: TextStyle(
-                                        fontFamily: 'Poppins ,sans-serif',
-                                        height: 1.5,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors
-                                            .white, // This color will be covered by the gradient
-                                        fontSize: 20,
-                                      ),
-                                    ),
+                                  TextShadermask(
+                                    Text: 'Token Features',
                                   ),
-                                  SizedBox(height: 8),
                                   RichText(
                                     textAlign: TextAlign.center,
                                     text: TextSpan(
@@ -885,6 +653,344 @@ class _AppbarTransparentState extends State<AppbarTransparent> {
                         ],
                       ),
                     ],
+                  ),
+                  SizedBox(height: 150),
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ContentBox3(),
+                        SizedBox(width: 50),
+                        Column(
+                          children: [
+                            ContainerButton2(
+                              child: IconModel(
+                                boxDecoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      Color.fromARGB(255, 240, 190, 40),
+                                      Color.fromARGB(255, 240, 143, 40),
+                                      Color.fromARGB(255, 240, 93, 40),
+                                      Color.fromARGB(255, 240, 60, 40),
+                                    ],
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                  ),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                icon: Icons.access_time_rounded,
+                              ),
+                              Title: 'Delivery Reports\n',
+                              Text:
+                                  'Lorem ipsum dolor sit amet, conse ctetur dolor adipisicing elit.',
+                            ),
+                            SizedBox(height: 18),
+                            ContainerButton2(
+                              child: IconModel(
+                                boxDecoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      Color.fromARGB(255, 75, 10, 35),
+                                      Color.fromARGB(255, 144, 23, 69),
+                                      Color.fromARGB(255, 240, 93, 40),
+                                      Color.fromARGB(255, 236, 97, 81),
+                                    ],
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                  ),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                icon: Icons.wysiwyg_rounded,
+                              ),
+                              Title: 'Advanced Application Interface (API)\n',
+                              Text:
+                                  'Lorem ipsum dolor sit amet, conse ctetur dolor adipisicing elit.',
+                            ),
+                            SizedBox(height: 18),
+                            ContainerButton2(
+                              child: IconModel(
+                                boxDecoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      Color.fromARGB(255, 104, 244, 165),
+                                      const Color.fromARGB(255, 75, 138, 246),
+                                      Color.fromARGB(255, 75, 124, 246),
+                                      Color.fromARGB(255, 61, 47, 95),
+                                    ],
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                  ),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                icon: Icons.layers_rounded,
+                              ),
+                              Title: 'Software Development Kit (SDK)\n',
+                              Text:
+                                  'Lorem ipsum dolor sit amet, conse ctetur dolor adipisicing elit.',
+                            ),
+                            SizedBox(height: 18),
+                            ContainerButton2(
+                              child: IconModel(
+                                boxDecoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      Color.fromARGB(255, 149, 223, 100),
+                                      Color.fromARGB(255, 94, 211, 102),
+                                      Color.fromARGB(255, 42, 124, 42),
+                                      Color.fromARGB(255, 27, 97, 76),
+                                    ],
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                  ),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                icon: Icons.javascript,
+                              ),
+                              Title: 'Java Virtual Machine (JVM)\n',
+                              Text:
+                                  'Lorem ipsum dolor sit amet, conse ctetur dolor adipisicing elit.',
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 100),
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 500,
+                          width: 500,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('images/image20.png'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 100),
+                        ContentBox4(),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    child: AnimatedOpacity(
+                      duration: Duration(milliseconds: 2000),
+                      opacity: pixels > 2000 ? 1.0 : 0.0,
+                      child: Column(
+                        children: [
+                          AnimatedPadding(
+                            duration: Duration(milliseconds: 3000),
+                            padding: EdgeInsets.only(
+                              top: pixels > 2000 ? 0 : 500,
+                            ),
+                            child: AnimatedAlign(
+                              duration: Duration(milliseconds: 2000),
+                              alignment: pixels > 2000
+                                  ? Alignment.center
+                                  : Alignment.topCenter,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  SizedBox(height: 70),
+                                  TextShadermask(
+                                    Text: 'Token Features',
+                                  ),
+                                  RichText(
+                                    textAlign: TextAlign.center,
+                                    text: TextSpan(
+                                      style: TextStyle(
+                                        fontFamily: 'Poppins ,sans-serif',
+                                        height: 2,
+                                        color: Colors.white,
+                                      ),
+                                      children: [
+                                        TextSpan(
+                                          text: 'Why Choose Us',
+                                          style: TextStyle(
+                                            fontSize: 40,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  AnimatedPadding(
+                                    duration: Duration(milliseconds: 1000),
+                                    padding: EdgeInsets.only(
+                                      top: pixels > 2000 ? 0 : 200,
+                                    ),
+                                    child: AnimatedAlign(
+                                      duration: Duration(milliseconds: 3000),
+                                      alignment: pixels > 2000
+                                          ? Alignment.center
+                                          : Alignment.topCenter,
+                                      child: RichText(
+                                        textAlign: TextAlign.center,
+                                        text: TextSpan(
+                                          style: TextStyle(
+                                            fontFamily: 'Poppins ,sans-serif',
+                                            height: 1.5,
+                                            color: Colors.white,
+                                          ),
+                                          children: [
+                                            TextSpan(
+                                              text:
+                                                  'Our ICO Template Will Be A Perfect Platform For Presenting Your Ico Launch.\n',
+                                              style: TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w300,
+                                              ),
+                                            ),
+                                            TextSpan(
+                                              text:
+                                                  'This Landing Page Comes In Great And Clean Design\n',
+                                              style: TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w300,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  AnimatedPadding(
+                                    duration: Duration(milliseconds: 1000),
+                                    padding: EdgeInsets.only(
+                                      top: pixels > 1000 ? 0 : 200,
+                                    ),
+                                    child: AnimatedAlign(
+                                      duration: Duration(milliseconds: 3000),
+                                      alignment: pixels > 1000
+                                          ? Alignment.center
+                                          : Alignment.topCenter,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            'Funds Allocation',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 40,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                          SizedBox(width: 300),
+                                          Text(
+                                            'Token Distribution',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 40,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 50),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 100),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 500,
+                          width: 700,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('images/image21.png'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 100),
+                        Container(
+                          height: 500,
+                          width: 700,
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 500,
+                                width: 200,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage('images/image22.png'),
+                                    fit: BoxFit.fitHeight,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(width: 30),
+                              Container(
+                                child: Column(
+                                  children: [
+                                    TokenBox(
+                                      Text1: '12',
+                                      Text2: 'Overhead Token Distribution',
+                                      color: Color.fromARGB(255, 47, 21, 67),
+                                    ),
+                                    SizedBox(height: 10),
+                                    TokenBox(
+                                      Text1: '23',
+                                      Text2: 'Supporting Blockchain',
+                                      color: Color.fromARGB(255, 186, 81, 85),
+                                    ),
+                                    SizedBox(height: 10),
+                                    TokenBox(
+                                      Text1: '08',
+                                      Text2: 'Engineers and R&amp;D',
+                                      color: Color.fromARGB(255, 81, 172, 186),
+                                    ),
+                                    SizedBox(height: 10),
+                                    TokenBox(
+                                      Text1: '07',
+                                      Text2: 'Paltform Operations',
+                                      color: Color.fromARGB(255, 141, 20, 104),
+                                    ),
+                                    SizedBox(height: 10),
+                                    TokenBox(
+                                      Text1: '05',
+                                      Text2: 'Network Growth Marketing',
+                                      color: Color.fromARGB(255, 20, 141, 28),
+                                    ),
+                                    SizedBox(height: 10),
+                                    TokenBox(
+                                      Text1: '08',
+                                      Text2: 'Oracle Network Developers',
+                                      color: Color.fromARGB(255, 208, 177, 25),
+                                    ),
+                                    SizedBox(height: 10),
+                                    TokenBox(
+                                      Text1: '05',
+                                      Text2: 'Engineers and R&amp;D',
+                                      color: Color.fromARGB(255, 200, 90, 5),
+                                    ),
+                                    SizedBox(height: 10),
+                                    TokenBox(
+                                      Text1: '27',
+                                      Text2: 'Paltform Operations',
+                                      color: Color.fromARGB(255, 37, 123, 221),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
