@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:websites/animated_container1.dart';
 import 'package:websites/appbar_button.dart';
 import 'package:websites/buttons/container_button2.dart';
+import 'package:websites/buttons/square_button.dart';
 import 'package:websites/checkbox_cont.dart';
 import 'package:websites/buttons/container_button.dart';
 import 'package:websites/contentbox/content_box1.dart';
@@ -13,9 +14,22 @@ import 'package:websites/buttons/outlined_button.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/painting.dart';
 import 'package:websites/contentbox/content_box4.dart';
+import 'package:websites/contentbox/mini_contentbox3.dart';
+import 'package:websites/contentbox/mini_contentbox4.dart';
 import 'package:websites/contentbox/token_box.dart';
+import 'package:websites/token/circle_ring.dart';
+import 'package:websites/countdown/timer_basic.dart';
+import 'package:websites/countdown/timer_frame.dart';
 import 'package:websites/icons/icon_model.dart';
+import 'package:websites/token/token_container.dart';
+import 'package:websites/tree_content/circle.dart';
 import 'package:websites/text_shadermask.dart';
+import 'package:websites/tree_content/timeline_1.dart';
+import 'package:flutter/cupertino.dart';
+
+import 'package:flutter_timer_countdown/flutter_timer_countdown.dart';
+
+import 'package:websites/tree_content/tree_content1.dart';
 
 class AppbarTransparent extends StatefulWidget {
   const AppbarTransparent({Key? key}) : super(key: key);
@@ -503,7 +517,7 @@ class _AppbarTransparentState extends State<AppbarTransparent> {
               ],
             ),
             Container(
-              height: MediaQuery.of(context).size.height * 4,
+              height: MediaQuery.of(context).size.height * 3.2,
               width: MediaQuery.of(context).size.width,
               color: Colors.black,
               child: Column(
@@ -511,17 +525,17 @@ class _AppbarTransparentState extends State<AppbarTransparent> {
                   Container(
                     child: AnimatedOpacity(
                       duration: Duration(milliseconds: 500),
-                      opacity: pixels > 2000 ? 1.0 : 0.0,
+                      opacity: pixels > 2200 ? 1.0 : 0.0,
                       child: Column(
                         children: [
                           AnimatedPadding(
                             duration: Duration(milliseconds: 500),
                             padding: EdgeInsets.only(
-                              top: pixels > 2000 ? 0 : 100,
+                              top: pixels > 2200 ? 0 : 100,
                             ),
                             child: AnimatedAlign(
                               duration: Duration(milliseconds: 500),
-                              alignment: pixels > 1000
+                              alignment: pixels > 2100
                                   ? Alignment.center
                                   : Alignment.topCenter,
                               child: Column(
@@ -775,130 +789,81 @@ class _AppbarTransparentState extends State<AppbarTransparent> {
                       ],
                     ),
                   ),
+                  SizedBox(height: 50),
                   Container(
-                    child: AnimatedOpacity(
-                      duration: Duration(milliseconds: 2000),
-                      opacity: pixels > 2000 ? 1.0 : 0.0,
-                      child: Column(
-                        children: [
-                          AnimatedPadding(
-                            duration: Duration(milliseconds: 3000),
-                            padding: EdgeInsets.only(
-                              top: pixels > 2000 ? 0 : 500,
-                            ),
-                            child: AnimatedAlign(
-                              duration: Duration(milliseconds: 2000),
-                              alignment: pixels > 2000
-                                  ? Alignment.center
-                                  : Alignment.topCenter,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  SizedBox(height: 70),
-                                  TextShadermask(
-                                    Text: 'Token Features',
+                    child: Column(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            AnimatedOpacity(
+                              opacity: pixels > 4100 ? 1.0 : 0.0,
+                              duration: Duration(milliseconds: 500),
+                              child: Container(
+                                height: 500,
+
+                                //color: Color.fromARGB(255, 197, 197, 213),
+                                child: AnimatedPadding(
+                                  duration: Duration(milliseconds: 500),
+                                  padding: EdgeInsets.only(
+                                    top: pixels > 4100 ? 0 : 100,
                                   ),
-                                  RichText(
-                                    textAlign: TextAlign.center,
-                                    text: TextSpan(
-                                      style: TextStyle(
-                                        fontFamily: 'Poppins ,sans-serif',
-                                        height: 2,
-                                        color: Colors.white,
-                                      ),
+                                  child: Center(
+                                    child: Column(
                                       children: [
-                                        TextSpan(
-                                          text: 'Why Choose Us',
-                                          style: TextStyle(
-                                            fontSize: 40,
-                                            fontWeight: FontWeight.w500,
+                                        MiniContentbox3(),
+                                        AnimatedOpacity(
+                                          opacity: pixels > 4150 ? 1.0 : 0.0,
+                                          duration: Duration(milliseconds: 500),
+                                          child: AnimatedPadding(
+                                            duration:
+                                                Duration(milliseconds: 1000),
+                                            padding: EdgeInsets.only(
+                                              top: pixels > 4150 ? 0 : 100,
+                                            ),
+                                            child: AnimatedAlign(
+                                              duration:
+                                                  Duration(milliseconds: 1000),
+                                              alignment: pixels > 4150
+                                                  ? Alignment.center
+                                                  : Alignment.topCenter,
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    'Funds Allocation',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 40,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                    ),
+                                                  ),
+                                                  SizedBox(width: 300),
+                                                  Text(
+                                                    'Token Distribution',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 40,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
                                           ),
                                         ),
                                       ],
                                     ),
                                   ),
-                                  AnimatedPadding(
-                                    duration: Duration(milliseconds: 1000),
-                                    padding: EdgeInsets.only(
-                                      top: pixels > 2000 ? 0 : 200,
-                                    ),
-                                    child: AnimatedAlign(
-                                      duration: Duration(milliseconds: 3000),
-                                      alignment: pixels > 2000
-                                          ? Alignment.center
-                                          : Alignment.topCenter,
-                                      child: RichText(
-                                        textAlign: TextAlign.center,
-                                        text: TextSpan(
-                                          style: TextStyle(
-                                            fontFamily: 'Poppins ,sans-serif',
-                                            height: 1.5,
-                                            color: Colors.white,
-                                          ),
-                                          children: [
-                                            TextSpan(
-                                              text:
-                                                  'Our ICO Template Will Be A Perfect Platform For Presenting Your Ico Launch.\n',
-                                              style: TextStyle(
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.w300,
-                                              ),
-                                            ),
-                                            TextSpan(
-                                              text:
-                                                  'This Landing Page Comes In Great And Clean Design\n',
-                                              style: TextStyle(
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.w300,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  AnimatedPadding(
-                                    duration: Duration(milliseconds: 1000),
-                                    padding: EdgeInsets.only(
-                                      top: pixels > 1000 ? 0 : 200,
-                                    ),
-                                    child: AnimatedAlign(
-                                      duration: Duration(milliseconds: 3000),
-                                      alignment: pixels > 1000
-                                          ? Alignment.center
-                                          : Alignment.topCenter,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            'Funds Allocation',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 40,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                          SizedBox(width: 300),
-                                          Text(
-                                            'Token Distribution',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 40,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
+                                ),
                               ),
                             ),
-                          ),
-                          SizedBox(height: 50),
-                        ],
-                      ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
                   Padding(
@@ -994,6 +959,317 @@ class _AppbarTransparentState extends State<AppbarTransparent> {
                   ),
                 ],
               ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 50),
+              height: MediaQuery.of(context).size.height * 3,
+              width: MediaQuery.of(context).size.width,
+              color: Colors.black,
+              child: Column(
+                //mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  AnimatedOpacity(
+                    opacity: pixels > 5000 ? 1.0 : 0.0,
+                    duration: Duration(milliseconds: 1000),
+                    child: Container(
+                      height: 300,
+                      width: 800,
+                      child: AnimatedPadding(
+                        duration: Duration(milliseconds: 1000),
+                        padding: EdgeInsets.only(
+                          top: pixels > 5000 ? 0 : 100,
+                        ),
+                        child: MiniContentbox4(),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 50),
+                  Column(
+                    children: [
+                      Container(
+                        child: VerticalTimeline(
+                          child1: Circle1(
+                            text1: '22 Sep\n',
+                            text2: '2018',
+                          ),
+                          child2: TreeContent1(
+                            text1: 'Listing to the major exchanges\n',
+                          ),
+                        ),
+                      ),
+                      Container(
+                        child: VerticalTimeline(
+                          child1: TreeContent1(
+                            text1: 'Platform integration to marketplaces\n',
+                          ),
+                          child2: Circle1(
+                            text1: '22 Sep\n',
+                            text2: '2018',
+                          ),
+                        ),
+                      ),
+                      Container(
+                        child: VerticalTimeline(
+                          child1: Circle1(
+                            text1: '22 Sep\n',
+                            text2: '2018',
+                          ),
+                          child2: TreeContent1(
+                            text1: 'Crypto Wallet version release\n',
+                          ),
+                        ),
+                      ),
+                      Container(
+                        child: VerticalTimeline(
+                          child1: TreeContent1(
+                            text1: 'Platform ealier version development\n',
+                          ),
+                          child2: Circle1(
+                            text1: '22 Sep\n',
+                            text2: '2018',
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 100),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 500,
+                        width: 500,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: AssetImage('images/image23.jpg'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        child: Column(
+                          children: [
+                            SizedBox(height: 20),
+                            Text(
+                              'TOKEN SALE ENDS IN',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 35,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            SizedBox(height: 50),
+                            TimerCountdown(
+                              format:
+                                  CountDownTimerFormat.daysHoursMinutesSeconds,
+                              endTime: DateTime.now().add(
+                                Duration(
+                                  days: 15,
+                                  hours: 20,
+                                  minutes: 47,
+                                  seconds: 45,
+                                ),
+                              ),
+                              onEnd: () {
+                                print("Timer finished");
+                              },
+                              timeTextStyle: TextStyle(
+                                color: CupertinoColors.white,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 60,
+                              ),
+                              colonsTextStyle: TextStyle(
+                                color: CupertinoColors.white,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 40,
+                              ),
+                              descriptionTextStyle: TextStyle(
+                                color: CupertinoColors.white,
+                                fontSize: 20,
+                              ),
+                              spacerWidth: 30,
+                              daysDescription: "days",
+                              hoursDescription: "hours",
+                              minutesDescription: "minutes",
+                              secondsDescription: "seconds",
+                            ),
+                            SizedBox(height: 50),
+                            Container(
+                              child: Column(
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        '33m',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                      SizedBox(width: 250),
+                                      Text(
+                                        '75m',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Stack(
+                                        alignment: Alignment.centerLeft,
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.only(left: 10),
+                                            height: 15,
+                                            width: 350,
+                                            decoration: BoxDecoration(
+                                              color: const Color.fromARGB(
+                                                  255, 117, 23, 23),
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                          ),
+                                          Positioned(
+                                            child: Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 345),
+                                              child: Container(
+                                                height: 10,
+                                                width: 150,
+                                                decoration: BoxDecoration(
+                                                  color: const Color.fromARGB(
+                                                      255, 240, 190, 40),
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 50),
+                            CustomSquaredButton(
+                              Text: 'BUY MORE TOKENS',
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(width: 240),
+                      Container(
+                        height: 500,
+                        width: 700,
+                        child: Row(
+                          children: [
+                            Column(
+                              children: [
+                                TokenContainer(
+                                  child1: CircleRing(
+                                    color1: Color.fromARGB(255, 235, 199, 91),
+                                  ),
+                                  text1: 'Token Name\n',
+                                  text2: 'Crypto Token',
+                                ),
+                                SizedBox(height: 10),
+                                TokenContainer(
+                                  child1: CircleRing(
+                                    color1: Color.fromARGB(255, 235, 96, 91),
+                                  ),
+                                  text1: 'ICO Pre-sale starts in\n',
+                                  text2: 'June 15-30, 2019',
+                                ),
+                                SizedBox(height: 10),
+                                TokenContainer(
+                                  child1: CircleRing(
+                                    color1: Color.fromARGB(255, 146, 235, 91),
+                                  ),
+                                  text1: 'Platform\n',
+                                  text2: 'Ethereum based',
+                                ),
+                                SizedBox(height: 10),
+                                TokenContainer(
+                                  child1: CircleRing(
+                                    color1: Color.fromARGB(255, 91, 194, 235),
+                                  ),
+                                  text1: 'PreICO price\n',
+                                  text2: '1 ETH = 2,682 Token',
+                                ),
+                                SizedBox(height: 10),
+                                TokenContainer(
+                                  child1: CircleRing(
+                                    color1: Color.fromARGB(255, 226, 91, 235),
+                                  ),
+                                  text1: 'Price in ICO\n',
+                                  text2: '1 ETH = 2,682 Token',
+                                ),
+                              ],
+                            ),
+                            SizedBox(width: 50),
+                            Column(
+                              children: [
+                                TokenContainer(
+                                  child1: CircleRing(
+                                    color1: Color.fromARGB(255, 91, 110, 235),
+                                  ),
+                                  text1: 'Token Soft cap\n',
+                                  text2: '18.000.000',
+                                ),
+                                SizedBox(height: 10),
+                                TokenContainer(
+                                  child1: CircleRing(
+                                    color1: Color.fromARGB(255, 235, 146, 91),
+                                  ),
+                                  text1: 'Token Hard Cap\n',
+                                  text2: '78.000.000',
+                                ),
+                                SizedBox(height: 10),
+                                TokenContainer(
+                                  child1: CircleRing(
+                                    color1: Color.fromARGB(255, 146, 91, 235),
+                                  ),
+                                  text1: 'Total Supply\n',
+                                  text2: '250.000.000 Token',
+                                ),
+                                SizedBox(height: 10),
+                                TokenContainer(
+                                  child1: CircleRing(
+                                    color1: Color.fromARGB(255, 226, 91, 235),
+                                  ),
+                                  text1: 'Sold Tokens\n',
+                                  text2: '49,828,000 Token',
+                                ),
+                                SizedBox(height: 10),
+                                TokenContainer(
+                                  child1: CircleRing(
+                                    color1: Color.fromARGB(255, 91, 194, 235),
+                                  ),
+                                  text1: 'Remaining Tokens\n',
+                                  text2: '200,182,000 Token',
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              height: 500,
+              width: MediaQuery.of(context).size.width,
+              color: Color.fromARGB(255, 185, 149, 149),
             ),
           ],
         ),

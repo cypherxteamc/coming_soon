@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:websites/text_shadermask.dart';
 
-class MiniContentbox3 extends StatefulWidget {
-  const MiniContentbox3({Key? key}) : super(key: key);
+class MiniContentbox4 extends StatefulWidget {
+  const MiniContentbox4({Key? key}) : super(key: key);
 
   @override
-  _MiniContentbox3State createState() => _MiniContentbox3State();
+  _MiniContentbox4State createState() => _MiniContentbox4State();
 }
 
-class _MiniContentbox3State extends State<MiniContentbox3> {
+class _MiniContentbox4State extends State<MiniContentbox4> {
   @override
   Widget build(BuildContext context) {
     return Column(
