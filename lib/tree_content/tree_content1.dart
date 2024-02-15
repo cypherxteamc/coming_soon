@@ -31,7 +31,7 @@ class _TreeContent1State extends State<TreeContent1> {
                   style: TextStyle(
                     height: 1.5,
                     fontWeight: FontWeight.w500,
-                    fontSize: 30,
+                    fontSize: 20,
                   ),
                 ),
                 TextSpan(
@@ -40,7 +40,7 @@ class _TreeContent1State extends State<TreeContent1> {
                   style: TextStyle(
                     height: 3,
                     fontWeight: FontWeight.w300,
-                    fontSize: 18,
+                    fontSize: 15,
                   ),
                 ),
                 TextSpan(
@@ -48,7 +48,7 @@ class _TreeContent1State extends State<TreeContent1> {
                   style: TextStyle(
                     height: 1.5,
                     fontWeight: FontWeight.w300,
-                    fontSize: 18,
+                    fontSize: 15,
                   ),
                 ),
               ],

@@ -22,8 +22,8 @@ class _TokenBoxState extends State<TokenBox> {
     return Stack(
       children: [
         Container(
-          padding: EdgeInsets.only(left: 30, top: 3),
-          height: 50,
+          padding: EdgeInsets.only(left: 30, top: 1),
+          height: 40,
           width: 400,
           decoration: BoxDecoration(
             border: Border.all(
@@ -38,7 +38,7 @@ class _TokenBoxState extends State<TokenBox> {
                 widget.Text1,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 25,
+                  fontSize: 20,
                   fontWeight: FontWeight.w900,
                 ),
               ),
@@ -56,7 +56,7 @@ class _TokenBoxState extends State<TokenBox> {
         Positioned(
           child: Container(
             width: 15,
-            height: 55,
+            height: 45,
             color: widget.color,
           ),
           left: 1,

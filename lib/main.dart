@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:websites/aboutUs/aboutus.dart';
 import 'package:websites/home.dart';
 
 void main() {
@@ -11,8 +12,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    double Width = MediaQuery.of(context).size.width;
-    double Height = MediaQuery.of(context).size.height;
+    final double Width = MediaQuery.of(context).size.width;
+    final double Height = MediaQuery.of(context).size.height;
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(

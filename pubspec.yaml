@@ -42,6 +42,9 @@ dev_dependencies:
     sdk: flutter
   timeline_tile: ^2.0.0
   flutter_timer_countdown: ^1.0.7
+  responsive_framework: ^1.1.1
+  font_awesome_flutter: ^10.7.0
+  responsive_builder: ^0.7.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -77,6 +80,13 @@ flutter:
      - images/image21.png
      - images/image22.png
      - images/image23.jpg
+     - images/image24.png
+     - images/image25.png
+     - images/image26.jpg
+     - images/image27.jpg
+     - images/image28.jpg
+     - images/photo1.png
+     - images/pattern1.png
      
 
 

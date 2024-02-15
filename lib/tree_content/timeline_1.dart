@@ -45,13 +45,13 @@ class _VerticalTimelineState extends State<VerticalTimeline> {
               padding: EdgeInsets.all(8),
             ),
             startChild: Container(
-              padding: EdgeInsets.only(left: 250),
+              padding: EdgeInsets.only(left: 150),
               height: 160,
               child: widget.child1,
             ),
             endChild: Container(
               height: 160,
-              padding: EdgeInsets.only(right: 250),
+              padding: EdgeInsets.only(right: 150),
               child: widget.child2,
             ),
           ),
